@@ -25,13 +25,13 @@ The Windows 10 Start Menu tile layout is fragile: tiles get lost, icons disappea
 1. Double-click `Backup Start Menu.bat`
 2. The script auto-requests administrator privileges (UAC)
 3. Wait for completion. Three files are generated in the script's folder:
-   - `StartMenuBackup.xml` — current layout (overwritten on next backup; convenient for direct Restore)
-   - `StartMenuBackup_YYYYMMDD_HHmmss.xml` — historical snapshot
+   - `StartMenuBackup.xml` — current layout (overwritten on next backup; convenient for direct Restore) - It is recommended to check whether the XML code aligns with the current actual arrangement;
+   - `StartMenuBackup_YYYYMMDD_HHmmss.xml` — historical snapshot - It is recommended to check whether the XML code aligns with the current actual arrangement;
    - `CloudStore_Backup_YYYYMMDD_HHmmss.reg` — registry backup
 
 ### Restore
 
-1. Double-click `Restore Start Menu.bat`
+1. Double-click `Restore Start Menu.bat` - Please ensure the correctness of the XML code before running;
 2. The script auto-requests administrator privileges (UAC)
 3. The script **first backs up the current registry to `CloudStore_Backup.reg`**, then applies the layout and restarts Explorer
 4. Explorer will restart automatically
