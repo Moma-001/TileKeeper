@@ -25,13 +25,13 @@ Windows 10 开始菜单磁贴布局非常脆弱：磁贴经常丢失、图标消
 1. 双击运行 `Backup Start Menu.bat`
 2. 脚本会自动请求管理员权限（UAC）
 3. 等待运行结束，生成的三个文件位于脚本同目录：
-   - `StartMenuBackup.xml` —— 当前布局（下次备份会被覆盖，方便直接运行Restore脚本）
-   - `StartMenuBackup_YYYYMMDD_HHmmss.xml` —— 历史快照
+   - `StartMenuBackup.xml` —— 当前布局（下次备份会被覆盖，方便直接运行Restore脚本）-建议检查xml代码是否与当前实际排列符合；
+   - `StartMenuBackup_YYYYMMDD_HHmmss.xml` —— 历史快照 -建议检查xml代码是否与当前实际排列符合；
    - `CloudStore_Backup_YYYYMMDD_HHmmss.reg` —— 注册表备份
 
 ### 恢复
 
-1. 双击运行 `Restore Start Menu.bat`
+1. 双击运行 `Restore Start Menu.bat` -运行前请确保xml代码是否正确；
 2. 脚本会自动请求管理员权限（UAC）
 3. 脚本会**先将当前注册表备份到 `CloudStore_Backup.reg`**，然后应用布局并重启资源管理器
 4. 恢复完成后会自动重启 Explorer
